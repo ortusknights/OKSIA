@@ -1,0 +1,14 @@
+OKSIA OpenAI API Key
+
+Place your OpenAI API key in one of these secure locations:
+
+1. WordPress constant in wp-config.php:
+   define('OKSIA_OPENAI_API_KEY', 'your-key-here');
+
+2. Environment variable:
+   OKSIA_OPENAI_API_KEY=your-key-here
+
+3. Secure local file outside the plugin UI:
+   wp-content/uploads/oksia-secret/openai-api-key.txt
+
+This file is only an example and should not contain a live secret.
