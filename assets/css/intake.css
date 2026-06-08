@@ -1,0 +1,1292 @@
+/* ============================================================
+   OK — Client Intake Form
+   ============================================================ */
+
+:root {
+    --oksia-intake-primary: #173f68;
+    --oksia-intake-primary-dark: #132041;
+    --oksia-intake-primary-bg: #eef5fb;
+    --oksia-intake-primary-text: #173f68;
+    --oksia-intake-radius: 10px;
+    --oksia-intake-radius-sm: 6px;
+}
+
+.oksia-intake-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    font-size: 15px;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+.oksia-intake-wrap::before {
+    content: none;
+}
+
+/* ── Brand header ─────────────────────────────────────────── */
+
+.oksia-intake-brand {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.oksia-intake-logo {
+    max-height: 52px;
+    width: auto;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.oksia-intake-brand-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #173f68;
+    letter-spacing: .3px;
+}
+
+.oksia-intake-tagline {
+    font-size: 13px;
+    color: #5a6b7b;
+    margin-top: 4px;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+
+.oksia-intake-card {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.oksia-public-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.95fr);
+    gap: 16px;
+    align-items: stretch;
+    margin: 0 0 18px;
+}
+
+.oksia-agent-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.95fr);
+    gap: 16px;
+    align-items: stretch;
+    margin: 0 0 18px;
+}
+
+.oksia-public-hero__copy,
+.oksia-public-hero__notes {
+    border: 1px solid #cddbe8;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 12px 32px rgba(16, 37, 61, 0.06);
+}
+
+.oksia-public-hero__copy {
+    padding: 20px 22px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 250, 253, 0.92));
+}
+
+.oksia-agent-hero__copy,
+.oksia-agent-hero__notes {
+    border: 1px solid #cddbe8;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 12px 32px rgba(16, 37, 61, 0.06);
+}
+
+.oksia-agent-hero__copy {
+    padding: 20px 22px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 250, 253, 0.92));
+}
+
+.oksia-public-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #1f7a8c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.oksia-public-hero__copy h2 {
+    margin: 0 0 10px;
+    color: #173f68;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.12;
+}
+
+.oksia-agent-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #1f7a8c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.oksia-agent-hero__copy h2 {
+    margin: 0 0 10px;
+    color: #173f68;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.12;
+}
+
+.oksia-public-hero__copy p {
+    margin: 0;
+    color: #5a6b7b;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 60ch;
+}
+
+.oksia-agent-hero__copy p {
+    margin: 0;
+    color: #5a6b7b;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 60ch;
+}
+
+.oksia-public-hero__notes {
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+    align-content: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 251, 254, 0.92));
+}
+
+.oksia-agent-hero__notes {
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+    align-content: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 251, 254, 0.92));
+}
+
+.oksia-public-note {
+    position: relative;
+    padding: 14px 16px 14px 42px;
+    border-radius: 14px;
+    border: 1px solid #cddbe8;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 250, 253, 0.99));
+    color: #173f68;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.oksia-public-note::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, #d9eef4, #1f7a8c);
+    box-shadow: 0 0 0 4px rgba(31, 122, 140, 0.12);
+}
+
+.oksia-agent-note {
+    position: relative;
+    padding: 14px 16px 14px 42px;
+    border-radius: 14px;
+    border: 1px solid #cddbe8;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 250, 253, 0.99));
+    color: #173f68;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.oksia-agent-note::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, #d9eef4, #1f7a8c);
+    box-shadow: 0 0 0 4px rgba(31, 122, 140, 0.12);
+}
+
+/* ── Section labels ───────────────────────────────────────── */
+
+.oksia-intake-section-label {
+    font-size: 19px;
+    font-weight: 600;
+    color: #5a6b7b;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ── Fields ───────────────────────────────────────────────── */
+
+.oksia-intake-field {
+    margin-bottom: 1.1rem;
+}
+
+.oksia-intake-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #173f68;
+    margin-bottom: 6px;
+}
+
+.oksia-intake-field input,
+.oksia-intake-field select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #ffffff;
+    border: 1px solid #cddbe8;
+    border-radius: var(--oksia-intake-radius-sm);
+    outline: none;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+.oksia-intake-field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+    cursor: pointer;
+}
+
+.oksia-intake-field input:focus,
+.oksia-intake-field select:focus {
+    border-color: var(--oksia-intake-primary);
+    box-shadow: 0 0 0 3px rgba(31, 122, 140, .12);
+    background: #fff;
+}
+
+.oksia-intake-field--error input,
+.oksia-intake-field--error select,
+.oksia-intake-field--error textarea,
+.oksia-field-error input,
+.oksia-field-error select,
+.oksia-field-error textarea {
+    border-color: #d63638 !important;
+    box-shadow: 0 0 0 1px #d63638 inset, 0 0 0 3px rgba(214, 54, 56, .12) !important;
+    background: #fff5f5 !important;
+}
+
+.oksia-intake-field--error label,
+.oksia-field-error label {
+    color: #b91c1c;
+}
+
+.oksia-intake-field input::placeholder {
+    color: #bbb;
+}
+
+/* ── Grids ────────────────────────────────────────────────── */
+
+.oksia-intake-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.oksia-intake-grid-2--name-row {
+    grid-template-columns: minmax(110px, 0.7fr) minmax(0, 2.3fr);
+}
+
+@media (max-width: 480px) {
+    .oksia-intake-grid-2,
+    .oksia-intake-grid-2--name-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Phone row ────────────────────────────────────────────── */
+
+.oksia-phone-row {
+    display: flex;
+    gap: 8px;
+}
+
+.oksia-phone-prefix {
+    height: 42px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #555;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: var(--oksia-intake-radius-sm);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.oksia-phone-row input {
+    flex: 1;
+}
+
+/* ── Trip type selector ───────────────────────────────────── */
+
+.oksia-trip-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.1rem;
+}
+
+.oksia-tt {
+    border: 1px solid #cddbe8;
+    border-radius: var(--oksia-intake-radius-sm);
+    padding: .8rem 1rem;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+    background: #ffffff;
+    user-select: none;
+}
+
+.oksia-tt:hover {
+    border-color: #1f7a8c;
+}
+
+.oksia-tt--on {
+    border-color: var(--oksia-intake-primary) !important;
+    background: linear-gradient(180deg, #f8fcfd, var(--oksia-intake-primary-bg)) !important;
+}
+
+.oksia-tt-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    transition: color .15s;
+}
+
+.oksia-tt--on .oksia-tt-name {
+    color: var(--oksia-intake-primary-text);
+}
+
+.oksia-tt-sub {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 3px;
+    transition: color .15s;
+}
+
+.oksia-tt--on .oksia-tt-sub {
+    color: var(--oksia-intake-primary-dark);
+}
+
+/* ── Pax counter rows ─────────────────────────────────────── */
+
+.oksia-pax-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.oksia-pax-row {
+    background: linear-gradient(180deg, #ffffff, #f7fbfe);
+    border: 1px solid #cddbe8;
+    border-radius: var(--oksia-intake-radius-sm);
+    padding: .9rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.oksia-pax-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.oksia-pax-age {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 2px;
+}
+
+.oksia-pax-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.oksia-pax-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #cddbe8;
+    background: #ffffff;
+    color: #173f68;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background .15s, border-color .15s;
+    padding: 0;
+}
+
+.oksia-pax-btn:hover {
+    background: #eef7fb;
+    border-color: #1f7a8c;
+}
+
+.oksia-pax-val {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ── Error message ────────────────────────────────────────── */
+
+.oksia-intake-err {
+    margin-top: 1rem;
+    font-size: 13px;
+    color: #173f68;
+    background: linear-gradient(180deg, #f8fcfd, #fff);
+    border: 1px solid #cddbe8;
+    border-radius: var(--oksia-intake-radius-sm);
+    padding: .6rem .9rem;
+}
+
+/* ── Submit button ────────────────────────────────────────── */
+
+.oksia-intake-submit {
+    width: 100%;
+    height: 48px;
+    background: linear-gradient(180deg, #1f7a8c 0%, #173f68 100%);
+    color: #fff;
+    border: none;
+    border-radius: var(--oksia-intake-radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: transform .1s, filter .15s;
+    letter-spacing: .3px;
+    box-shadow: 0 14px 30px rgba(23, 63, 104, 0.16);
+}
+
+.oksia-intake-submit:hover {
+    filter: brightness(1.04);
+}
+
+.oksia-intake-submit:active {
+    transform: scale(.99);
+}
+
+.oksia-intake-submit:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* ── Success card ─────────────────────────────────────────── */
+
+.oksia-intake-success {
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+.oksia-qid-badge {
+    display: inline-block;
+    background: var(--oksia-intake-primary-bg);
+    border: 1px solid var(--oksia-intake-primary);
+    color: var(--oksia-intake-primary-text);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    letter-spacing: .6px;
+}
+
+.oksia-success-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: .5rem;
+}
+
+.oksia-success-msg {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.oksia-success-details {
+    margin-top: 1.2rem;
+    background: linear-gradient(180deg, #ffffff, #f6fbfe);
+    border: 1px solid #cddbe8;
+    border-radius: var(--oksia-intake-radius-sm);
+    padding: 1rem 1.2rem;
+    font-size: 13px;
+    color: #666;
+    line-height: 2;
+    text-align: left;
+}
+
+.oksia-agent-login-card {
+    background: #fff;
+    border: 1px solid #cddbe8;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.oksia-agent-login-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #173f68;
+    margin-bottom: 0.4rem;
+}
+
+.oksia-agent-login-text {
+    font-size: 14px;
+    color: #5a6b7b;
+    margin-bottom: 1rem;
+}
+
+.oksia-agent-login-card form {
+    display: grid;
+    gap: 12px;
+}
+
+.oksia-agent-login-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #173f68;
+}
+
+.oksia-agent-login-card input[type="text"],
+.oksia-agent-login-card input[type="password"] {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #cddbe8;
+    border-radius: var(--oksia-intake-radius-sm);
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.oksia-agent-login-card input[type="submit"] {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: var(--oksia-intake-radius-sm);
+    background: linear-gradient(180deg, var(--oksia-intake-primary) 0%, var(--oksia-intake-primary-dark) 100%);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .oksia-intake-wrap {
+        padding: 1rem 0.75rem 2rem;
+        font-size: 16px;
+    }
+
+    .oksia-public-hero {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .oksia-public-hero__copy,
+    .oksia-public-hero__notes {
+        padding: 16px;
+    }
+
+    .oksia-public-hero__copy h2 {
+        font-size: 24px;
+    }
+
+    .oksia-agent-hero {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .oksia-agent-hero__copy,
+    .oksia-agent-hero__notes {
+        padding: 16px;
+    }
+
+    .oksia-agent-hero__copy h2 {
+        font-size: 24px;
+    }
+
+    .oksia-public-note {
+        padding-left: 38px;
+    }
+
+    .oksia-agent-note {
+        padding-left: 38px;
+    }
+
+    .oksia-intake-card {
+        padding: 1.15rem;
+        border-radius: 14px;
+    }
+
+    .oksia-intake-brand {
+        margin-bottom: 1.25rem;
+    }
+
+    .oksia-intake-section-label {
+        margin-bottom: 0.85rem;
+    }
+
+    .oksia-intake-grid-2,
+    .oksia-trip-type {
+        grid-template-columns: 1fr;
+    }
+
+    .oksia-phone-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .oksia-phone-prefix {
+        width: fit-content;
+        min-width: 52px;
+    }
+
+    .oksia-pax-row {
+        align-items: flex-start;
+        gap: 0.9rem;
+        flex-direction: column;
+    }
+
+    .oksia-pax-ctrl {
+        align-self: flex-end;
+    }
+
+    .oksia-intake-field input,
+    .oksia-intake-field select {
+        height: 46px;
+        font-size: 16px;
+    }
+
+    .oksia-intake-submit {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .oksia-success-details {
+        font-size: 14px;
+        line-height: 1.75;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 420px) {
+    .oksia-pax-ctrl {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .oksia-tt {
+        padding: 0.85rem 0.9rem;
+    }
+}
+
+:root {
+    --oksia-theme-bg: #f3f7fb;
+    --oksia-theme-surface: #ffffff;
+    --oksia-theme-border: #cddbe8;
+    --oksia-theme-ink: #10253d;
+    --oksia-theme-muted: #5a6b7b;
+    --oksia-theme-primary: #173f68;
+    --oksia-theme-secondary: #1f7a8c;
+    --oksia-theme-accent: #4aa39b;
+}
+
+.oksia-intake-wrap::before {
+    background:
+        radial-gradient(circle at top left, rgba(31, 122, 140, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(19, 61, 102, 0.10), transparent 24%),
+        linear-gradient(180deg, #f5f8fc 0%, #ffffff 100%);
+}
+
+.oksia-intake-wrap > .oksia-intake-brand,
+.oksia-intake-wrap > .oksia-public-hero,
+.oksia-intake-wrap.oksia-agent-workspace > .oksia-intake-brand,
+.oksia-intake-wrap.oksia-agent-workspace > .oksia-agent-hero,
+.oksia-workspace-hero,
+.oksia-dashboard-hero-card {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.oksia-intake-wrap.oksia-agent-workspace .oksia-agent-launcher,
+.oksia-intake-wrap .oksia-intake-card {
+    margin-top: 0 !important;
+}
+
+.oksia-intake-card,
+.oksia-public-hero__copy,
+.oksia-public-hero__notes,
+.oksia-public-note,
+.oksia-intake-field input,
+.oksia-intake-field select,
+.oksia-intake-section-label,
+.oksia-intake-divider {
+    border-color: var(--oksia-theme-border);
+}
+
+.oksia-intake-card {
+    background: transparent;
+    box-shadow: none;
+}
+
+.oksia-public-hero__copy h2,
+.oksia-intake-brand-name {
+    color: var(--oksia-theme-primary);
+}
+
+.oksia-public-hero__copy p,
+.oksia-intake-tagline,
+.oksia-intake-field label {
+    color: var(--oksia-theme-muted);
+}
+
+.oksia-intake-brand-name {
+    font-weight: 700;
+}
+
+.oksia-intake-field input,
+.oksia-intake-field select {
+    background: #ffffff;
+    color: var(--oksia-theme-ink);
+}
+
+.oksia-intake-field input:focus,
+.oksia-intake-field select:focus {
+    border-color: var(--oksia-theme-secondary);
+    box-shadow: 0 0 0 3px rgba(31, 122, 140, 0.12);
+}
+
+.oksia-intake-submit,
+.oksia-agent-login-card input[type="submit"] {
+    background: linear-gradient(180deg, var(--oksia-theme-secondary) 0%, #1a6675 100%);
+    color: #ffffff;
+    box-shadow: 0 16px 28px rgba(31, 122, 140, 0.16);
+}
+
+.oksia-intake-submit:hover,
+.oksia-agent-login-card input[type="submit"]:hover {
+    background: linear-gradient(180deg, #2a8696 0%, #1d7584 100%);
+}
+
+.oksia-tt,
+.oksia-pax-row,
+.oksia-success-details,
+.oksia-agent-login-card,
+.oksia-agent-login-card input[type="text"],
+.oksia-agent-login-card input[type="password"],
+.oksia-agent-login-card input[type="submit"] {
+    border-color: var(--oksia-theme-border);
+}
+
+.oksia-tt--on {
+    background: linear-gradient(180deg, #f8fcfd, var(--oksia-intake-primary-bg)) !important;
+}
+
+.oksia-tt:hover {
+    border-color: var(--oksia-intake-primary) !important;
+}
+
+.oksia-pax-row {
+    background: linear-gradient(180deg, #ffffff, #f6fbfe);
+}
+
+.oksia-pax-btn {
+    border-color: var(--oksia-theme-border);
+    background: #ffffff;
+    color: var(--oksia-theme-primary);
+}
+
+.oksia-pax-btn:hover {
+    background: #eef7fb;
+    border-color: var(--oksia-theme-secondary);
+}
+
+.oksia-intake-err {
+    color: var(--oksia-theme-primary);
+    background: linear-gradient(180deg, #f8fcfd, #ffffff);
+    border-color: var(--oksia-theme-border);
+}
+
+.oksia-qid-badge {
+    background: #eef7fb;
+    border-color: var(--oksia-theme-primary);
+    color: var(--oksia-theme-primary);
+}
+
+.oksia-success-details {
+    background: linear-gradient(180deg, #ffffff, #f6fbfe);
+    border-color: var(--oksia-theme-border);
+}
+
+.oksia-agent-login-card {
+    border-color: var(--oksia-theme-border);
+    box-shadow: 0 2px 12px rgba(16, 37, 61, .06);
+}
+
+.oksia-agent-login-title,
+.oksia-agent-login-card input[type="submit"] {
+    color: var(--oksia-theme-primary);
+}
+
+.oksia-agent-login-text {
+    color: var(--oksia-theme-muted);
+}
+
+/* Final hard override for intake surfaces. */
+.oksia-intake-wrap,
+.oksia-intake-wrap.oksia-agent-workspace,
+.oksia-public-hero__copy,
+.oksia-public-hero__notes,
+.oksia-public-note,
+.oksia-intake-card,
+.oksia-intake-field input,
+.oksia-intake-field select,
+.oksia-intake-section-label,
+.oksia-intake-divider,
+.oksia-trip-type .oksia-tt,
+.oksia-pax-row,
+.oksia-success-details,
+.oksia-agent-login-card,
+.oksia-agent-login-card input[type="text"],
+.oksia-agent-login-card input[type="password"],
+.oksia-agent-login-card input[type="submit"],
+.oksia-agent-hero__copy,
+.oksia-agent-hero__notes,
+.oksia-agent-note,
+.oksia-agent-workspace .oksia-intake-card,
+.oksia-agent-workspace .oksia-rate-markup-row,
+.oksia-agent-workspace .oksia-package-summary,
+.oksia-agent-workspace .oksia-intake-submit {
+    border-color: var(--oksia-theme-border) !important;
+}
+
+.oksia-intake-wrap::before {
+    content: none !important;
+}
+
+.oksia-public-hero__eyebrow,
+.oksia-intake-brand-name,
+.oksia-agent-login-title,
+.oksia-agent-hero__eyebrow,
+.oksia-agent-hero__copy h2,
+.oksia-qid-badge,
+.oksia-intake-section-label,
+.oksia-agent-workspace .oksia-rate-markup-row .oksia-selected-currency-label,
+.oksia-agent-workspace .oksia-package-summary input[readonly] {
+    color: var(--oksia-theme-primary) !important;
+}
+
+.oksia-public-hero__copy p,
+.oksia-intake-tagline,
+.oksia-intake-field label,
+.oksia-agent-login-text,
+.oksia-agent-hero__copy p,
+.oksia-agent-note,
+.oksia-agent-workspace .oksia-rate-markup-row label,
+.oksia-agent-workspace .oksia-intake-card label,
+.oksia-agent-workspace .oksia-intake-card .description,
+.oksia-agent-workspace .oksia-package-summary-note {
+    color: var(--oksia-theme-muted) !important;
+}
+
+.oksia-public-note::before {
+    background: radial-gradient(circle at 30% 30%, #d9eef4, var(--oksia-theme-secondary)) !important;
+    box-shadow: 0 0 0 4px rgba(31, 122, 140, 0.12) !important;
+}
+
+.oksia-intake-field input:focus,
+.oksia-intake-field select:focus,
+.oksia-pax-btn:hover,
+.oksia-tt:hover,
+.oksia-agent-login-card input[type="text"]:focus,
+.oksia-agent-login-card input[type="password"]:focus,
+.oksia-agent-workspace .oksia-intake-card input:focus,
+.oksia-agent-workspace .oksia-intake-card select:focus,
+.oksia-agent-workspace .oksia-intake-card textarea:focus,
+.oksia-agent-workspace .oksia-rate-markup-row input:focus {
+    border-color: var(--oksia-theme-secondary) !important;
+    box-shadow: 0 0 0 3px rgba(31, 122, 140, 0.14) !important;
+}
+
+.oksia-intake-submit,
+.oksia-agent-login-card input[type="submit"],
+.oksia-agent-workspace .oksia-intake-submit {
+    background: linear-gradient(180deg, var(--oksia-theme-secondary) 0%, #1a6675 100%) !important;
+    color: #ffffff !important;
+}
+
+.oksia-pax-btn,
+.oksia-tt,
+.oksia-public-note,
+.oksia-agent-note,
+.oksia-qid-badge,
+.oksia-success-details,
+.oksia-agent-login-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f6fbfe 100%) !important;
+}
+
+/* Agent draft panel */
+.oksia-agent-draft-panel {
+    margin-top: 1.4rem;
+    padding: 1.2rem;
+    border: 1px solid var(--oksia-theme-border);
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);
+    box-shadow: 0 10px 28px rgba(18, 39, 67, .06);
+}
+
+.oksia-agent-draft-panel__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: .9rem;
+    border-bottom: 1px solid rgba(82, 118, 171, .18);
+}
+
+.oksia-agent-draft-panel__note {
+    margin: .35rem 0 0;
+    color: var(--oksia-theme-muted);
+    font-size: .92rem;
+    line-height: 1.45;
+}
+
+.oksia-agent-draft-panel__meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .5rem;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+.oksia-agent-draft-version,
+.oksia-agent-draft-updated {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: .4rem .75rem;
+    font-size: .82rem;
+    line-height: 1.2;
+}
+
+.oksia-agent-draft-version {
+    background: rgba(31, 122, 140, .10);
+    color: var(--oksia-theme-primary);
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.oksia-agent-draft-updated {
+    background: #f4f7fb;
+    color: var(--oksia-theme-muted);
+    max-width: 100%;
+}
+
+.oksia-agent-trip-brief-panel {
+    margin-top: 1.1rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.oksia-agent-trip-brief-panel__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.oksia-agent-trip-brief-panel__note {
+    margin: .35rem 0 0;
+    color: var(--oksia-theme-muted);
+    font-size: .92rem;
+    line-height: 1.45;
+}
+
+.oksia-agent-trip-brief-panel__meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.oksia-agent-brief-count {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: .4rem .75rem;
+    background: rgba(31, 122, 140, .08);
+    color: var(--oksia-theme-primary);
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.oksia-agent-brief-days {
+    display: grid;
+    gap: .85rem;
+}
+
+.oksia-agent-brief-day-row {
+    padding: .9rem 1rem 1rem;
+    border: 1px solid rgba(82, 118, 171, .16);
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+}
+
+.oksia-agent-brief-day-row--leisure {
+    border-style: dashed;
+    background: linear-gradient(180deg, #fafcff 0%, #f6f9fd 100%);
+}
+
+.oksia-agent-brief-day-row__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    margin-bottom: .6rem;
+}
+
+.oksia-agent-brief-day-badge,
+.oksia-agent-brief-day-state {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: .34rem .7rem;
+    font-size: .8rem;
+    line-height: 1.2;
+}
+
+.oksia-agent-brief-day-badge {
+    background: rgba(31, 122, 140, .12);
+    color: var(--oksia-theme-primary);
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.oksia-agent-brief-day-state {
+    background: #f4f7fb;
+    color: var(--oksia-theme-muted);
+}
+
+.oksia-agent-brief-day-row--leisure .oksia-agent-brief-day-state {
+    background: rgba(31, 122, 140, .08);
+    color: var(--oksia-theme-primary);
+}
+
+.oksia-agent-brief-day-input {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--oksia-theme-border);
+    background: #ffffff;
+    box-shadow: inset 0 1px 2px rgba(15, 33, 58, .03);
+}
+
+.oksia-agent-brief-day-input:focus {
+    border-color: var(--oksia-theme-secondary);
+    box-shadow: 0 0 0 3px rgba(31, 122, 140, .12);
+}
+
+.oksia-agent-brief-source {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+}
+
+.oksia-agent-draft-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.1rem;
+}
+
+.oksia-agent-draft-field,
+.oksia-agent-draft-days p {
+    margin: 0;
+}
+
+.oksia-agent-draft-field label,
+.oksia-agent-draft-days label {
+    display: block;
+    margin-bottom: .35rem;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--oksia-theme-primary);
+}
+
+.oksia-agent-draft-field textarea,
+.oksia-agent-draft-days textarea,
+.oksia-agent-draft-days input[type="text"] {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--oksia-theme-border);
+    background: #ffffff;
+    box-shadow: inset 0 1px 2px rgba(15, 33, 58, .03);
+}
+
+.oksia-agent-draft-field textarea {
+    min-height: 112px;
+    resize: vertical;
+}
+
+.oksia-agent-draft-field--full {
+    grid-column: 1 / -1;
+}
+
+.oksia-agent-draft-days {
+    margin-top: 1.2rem;
+    padding-top: 1.05rem;
+    border-top: 1px solid rgba(82, 118, 171, .18);
+}
+
+.oksia-agent-draft-days__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: .9rem;
+}
+
+.oksia-agent-draft-days__header p {
+    margin: .35rem 0 0;
+    color: var(--oksia-theme-muted);
+    font-size: .92rem;
+    line-height: 1.45;
+}
+
+.oksia-agent-draft-days .oksia-day-card {
+    margin-top: .95rem;
+    padding: 1rem;
+    border: 1px solid rgba(82, 118, 171, .18);
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.oksia-agent-draft-days .oksia-day-card:first-of-type {
+    margin-top: 0;
+}
+
+.oksia-agent-draft-days .oksia-grid--two {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .9rem 1rem;
+    margin-bottom: .9rem;
+}
+
+.oksia-agent-draft-days .oksia-upload-row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.oksia-agent-draft-days .oksia-day-image-preview {
+    color: var(--oksia-theme-muted);
+    font-size: .9rem;
+}
+
+@media (max-width: 980px) {
+    .oksia-agent-draft-panel__header,
+    .oksia-agent-draft-days__header,
+    .oksia-agent-trip-brief-panel__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .oksia-agent-draft-panel__meta {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .oksia-agent-trip-brief-panel__meta {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 740px) {
+    .oksia-agent-draft-panel {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .oksia-agent-draft-grid,
+    .oksia-agent-draft-days .oksia-grid--two {
+        grid-template-columns: 1fr;
+    }
+
+    .oksia-agent-trip-brief-panel {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .oksia-agent-draft-field textarea {
+        min-height: 96px;
+    }
+
+    .oksia-agent-brief-day-row {
+        padding: .85rem .9rem .9rem;
+    }
+}
+
+/* Flat layout: no inner panel on client intake forms */
+.oksia-intake-card {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
