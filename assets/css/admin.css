@@ -1,0 +1,152 @@
+/* OKSIA Admin Styles */
+
+.oksia-admin-wrap {
+    margin: 20px;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background: #d4edda;
+    color: #155724;
+}
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+.status-suspended {
+    background: #f8d7da;
+    color: #721c24;
+}
+.status-draft {
+    background: #e2e3e5;
+    color: #383d41;
+}
+.status-sent {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+.status-confirmed {
+    background: #d4edda;
+    color: #155724;
+}
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Tables */
+.wp-list-table .actions {
+    white-space: nowrap;
+}
+
+.wp-list-table .actions a {
+    margin: 0 3px;
+}
+
+/* Settings Tabs */
+.nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+.settings-tab {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Dashboard Widgets */
+.oksia-dashboard-widget {
+    padding: 10px;
+}
+
+.oksia-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.oksia-stat-box {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.oksia-stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #23282d;
+}
+
+.oksia-stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Modal */
+.oksia-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.oksia-modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Loading Spinner */
+.oksia-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .oksia-stats {
+        flex-direction: column;
+    }
+    .oksia-stat-box {
+        margin: 5px 0;
+    }
+    .wp-list-table th,
+    .wp-list-table td {
+        font-size: 12px;
+    }
+}
